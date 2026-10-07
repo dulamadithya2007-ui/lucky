@@ -1,6 +1,4 @@
-# jarvis.spec  — PyInstaller build specification
-# Place this file in the same folder as jarvis.py
-# Run:  pyinstaller jarvis.spec
+
 
 block_cipher = None
 
@@ -12,9 +10,9 @@ a = Analysis(
     hiddenimports=[
         'pyttsx3',
         'pyttsx3.drivers',
-        'pyttsx3.drivers.sapi5',    # Windows TTS
-        'pyttsx3.drivers.nsss',     # macOS TTS
-        'pyttsx3.drivers.espeak',   # Linux TTS
+        'pyttsx3.drivers.sapi5',    
+        'pyttsx3.drivers.nsss',     
+        'pyttsx3.drivers.espeak',   
         'speech_recognition',
         'wikipedia',
         'wikipedia.exceptions',
@@ -62,14 +60,13 @@ exe = EXE(
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,           # compress (requires UPX installed, optional)
+    upx=True,           
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,      # ← NO black terminal window
+    console=False,      
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    # icon='jarvis.ico',  # ← uncomment and add your .ico file if you have one
 )
